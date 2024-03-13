@@ -58,7 +58,7 @@ def index():
             function search() {
                 const desc = document.getElementById('desc').value;
                 document.getElementById('results').innerHTML = '<p>Loading results...</p>';
-                fetch('/expand/?query=' + encodeURIComponent(desc))
+                fetch('/expand?query=' + encodeURIComponent(desc))
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('results').innerHTML = data;
