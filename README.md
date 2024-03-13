@@ -59,7 +59,12 @@ There is a good dataset for our task called StrategyQA which includes multi-hop 
 
 ## API
 
-Run with TODO
+```
+pip install aiohttp nltk flask transformers optimum onnx onnxruntime
+python -m nltk.downloader stopwords punkt
+python search.py
+```
+
 
 ## Output Examples
 
