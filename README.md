@@ -70,9 +70,6 @@ python search.py
 
 Good Examples:
 ```
-query: Create a guide for hiking in North America
-result: ['North American hiking tips.', 'Safety in North America.']
-
 query: Who has more money, Elon Musk or Bill Gates
 result: ['How much is Elon Musk worth.', 'How much is Bill Gates worth .']
 
@@ -98,6 +95,10 @@ result: ['Al Pacino is an actor in which movie directed by Francis Ford Coppola 
 # needs to use correct verbiage
 query: Which city has the tallest building between Boston and Atlanta?
 result: ['How tall is Boston.', 'How tall is Atlanta .']
+
+# "Safety in North America." is too broad
+query: Create a guide for hiking in North America
+result: ['North American hiking tips.', 'Safety in North America.']
 ```
 
 ## Benchmarks
