@@ -49,9 +49,9 @@ def index():
     <html>
     <body>
         <form id="searchForm">
-            <label for="desc">HN profile description:</label><br>
-            <textarea id="desc" name="desc" rows="4" cols="50"></textarea><br>
-            <input type="button" value="Search" onclick="search()">
+            <label for="desc">Question to Decompose:</label><br>
+            <textarea id="desc" name="desc" rows="1" cols="100"></textarea><br>
+            <input type="button" value="Decompose" onclick="search()">
         </form>
         <div id="results"></div>
         <script>
@@ -61,7 +61,7 @@ def index():
                 fetch('/expand?query=' + encodeURIComponent(desc))
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('results').innerHTML = JSON.stringify(data, null, 2);
+                    document.getElementById('results').innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
                 });
             }
         </script>
