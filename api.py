@@ -43,7 +43,7 @@ expand_query = get_query_expander()
 
 
 @app.route('/', methods=['GET'])
-async def index():
+def index():
     # Serving a simple form with JavaScript to handle form submission and display results
     return '''
     <html>
