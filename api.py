@@ -61,7 +61,7 @@ def index():
                 fetch('/expand?query=' + encodeURIComponent(desc))
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('results').innerHTML = data;
+                    document.getElementById('results').innerHTML = JSON.stringify(data, null, 2);
                 });
             }
         </script>
